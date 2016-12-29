@@ -9,12 +9,10 @@ import spark.Spark
 import spark.Spark.get
 
 fun main(args: Array<String>) {
-    println("Hello World")
 
-    Spark.staticFileLocation("/public");
-    get("/hello", { req, res -> "Hello World" });
 
-//    get("/hello/:name", { req, res -> "Hello " + req.params(":name") });
+    get("/hello", { req, res -> "Hello " });
+    get("/hello/:name", { req, res -> "Hello " + req.params(":name") });
 //    get("/name/:fname/:lname/json", { req, res -> Name(req.params(":fname"), req.params(":lname")) }, { obj -> gson.toJson(obj) });
 //
 //
